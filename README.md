@@ -185,5 +185,8 @@ Built with a modern stack for performance and reliability:
 ## License
 This project is licensed under the **PolyForm Noncommercial License 1.0.0**.
 
+---
+
+Vibecoded with ❤️ for kaizen traders.
 
 > v1.0.0 (Beta) Launch Release - Ultra Detailed Documentation, Feature Complete

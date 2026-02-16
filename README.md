@@ -22,8 +22,6 @@ TradeSlate is a professional-grade trading journal built for speed, privacy, and
 
 ## Visual Gallery
 
-*(Screenshots to be added from `Assets/Tradeslate Preview Images/`)*
-
 | Dashboard Overview | Trade Entry |
 |:---:|:---:|
 | ![Dashboard](Assets/Tradeslate%20Preview%20Images/Homepage.png) | ![Trade Entry](Assets/Tradeslate%20Preview%20Images/Trade_Entry_Tab.png) |

@@ -1,0 +1,76 @@
+{
+  "name": "tradeslate",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Offline-first trading journal",
+  "main": "dist-electron/electron/main.js",
+  "author": "Antigravity",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:vite\" \"npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:compile": "tsc -p electron/tsconfig.json",
+    "dev:electron": "npm run dev:compile && wait-on tcp:5173 && cross-env NODE_ENV=development node scripts/launch-electron.js",
+    "build": "npx tsc -p electron/tsconfig.json && npx vite build && npx electron-builder",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@huggingface/transformers": "^3.8.1",
+    "@types/react-grid-layout": "^1.3.6",
+    "axios": "^1.13.5",
+    "better-sqlite3": "^12.6.0",
+    "date-fns": "^4.1.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "fast-xml-parser": "^5.3.5",
+    "form-data": "^4.0.5",
+    "html2canvas": "^1.4.1",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-grid-layout": "^2.2.2",
+    "recharts": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "wait-on": "^9.0.3"
+  },
+  "build": {
+    "appId": "com.tradeslate.app",
+    "productName": "TradeSlate",
+    "directories": {
+      "output": "release"
+    },
+    "asar": false,
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "electron/icon.png",
+      "Assets/**/*"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "win": {
+      "target": [
+        "dir"
+      ],
+      "verifyUpdateCodeSignature": false,
+      "forceCodeSigning": false
+    }
+  }
+}

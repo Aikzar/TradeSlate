@@ -1,0 +1,1485 @@
+/* Trade Card CSS - Scoped styles for trade card templates */
+
+/* ============================================
+   SHARED CARD STYLES
+   ============================================ */
+
+.trade-card-wrapper {
+    /* Dimensions controlled by JavaScript with transform: scale() */
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Do NOT set max-width/max-height - we use transform scaling */
+}
+
+.trade-card-export-target {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* P&L Colors */
+.pnl-positive {
+    color: #22c55e;
+}
+
+.pnl-negative {
+    color: #ef4444;
+}
+
+.pnl-glow-positive {
+    text-shadow: 0 0 30px rgba(34, 197, 94, 0.5), 0 0 60px rgba(34, 197, 94, 0.3);
+}
+
+.pnl-glow-negative {
+    text-shadow: 0 0 30px rgba(239, 68, 68, 0.5), 0 0 60px rgba(239, 68, 68, 0.3);
+}
+
+/* Direction Badges */
+.direction-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.direction-long {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.direction-short {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ============================================
+   TEMPLATE 1: APEX PRO (Dark Professional)
+   ============================================ */
+
+.template-apex-pro {
+    background: linear-gradient(145deg, #0a0a0a 0%, #0d1117 50%, #0a0a0a 100%);
+    color: #fff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.template-apex-pro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.apex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.apex-logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.apex-market {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.apex-market-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f4f4f5;
+}
+
+.apex-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.apex-pnl-label {
+    font-size: 14px;
+    color: #71717a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.apex-pnl-value {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.apex-custom-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 auto 4px auto;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    line-height: 1;
+    flex: 0 0 auto;
+}
+
+.apex-pnl-group {
+    text-align: center;
+    margin-bottom: 8px;
+    flex: 0 0 auto;
+}
+
+.apex-content-scaler {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+}
+
+.apex-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.apex-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.apex-stat-label {
+    font-size: 8px;
+    color: #71717a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.apex-stat-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f4f4f5;
+}
+
+.apex-custom-note {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #a1a1aa;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    max-height: 60px;
+    overflow: hidden;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Consistently spaced footer */
+.apex-footer {
+    padding-top: 12px;
+    padding-bottom: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+.apex-watermark {
+    font-size: 12px;
+    color: #52525b;
+    font-weight: 500;
+}
+
+.apex-date {
+    font-size: 12px;
+    color: #52525b;
+}
+
+/* Screenshot area for Apex */
+.apex-image-container {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.apex-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    background: none !important;
+    border: none !important;
+}
+
+/* ============================================
+   ASPECT RATIO OVERRIDES and TWEAKS (LOCKED TO 1:1)
+   ============================================ */
+
+/* Global Aesthetic Maxima for 1:1 Square */
+.aspect-1-1 .trade-card-export-target {
+    padding: 64px !important;
+}
+
+/* NO IMAGE - Centered Layout (User Requested) */
+.no-image .apex-pnl-value,
+.no-image .minimalist-pnl,
+.no-image .neon-pnl {
+    /* User: "don't change the sizing of the text" */
+    margin: 0 !important;
+    flex-grow: 0;
+}
+
+.no-image .apex-content,
+.no-image .minimalist-content,
+.no-image .neon-content {
+    justify-content: center !important;
+    gap: 32px !important;
+    /* Bring text closer together */
+    flex-grow: 1;
+}
+
+.no-image .minimalist-content-scaler,
+.no-image .apex-content-scaler,
+.no-image .neon-content-scaler {
+    flex: 0 1 auto !important;
+    /* Allow shrinking but don't force grow */
+    width: 100%;
+}
+
+.no-image .minimalist-stats,
+.no-image .apex-stats {
+    margin-top: 0 !important;
+    /* Reset layout margins */
+    padding-top: 0 !important;
+    border-top: none !important;
+    justify-content: center !important;
+}
+
+.no-image .minimalist-pnl-group {
+    margin: 0 !important;
+    /* Reset specific margins */
+}
+
+/* Vertical / Square Gaps Fix */
+.aspect-1-1 .apex-content,
+.aspect-1-1 .minimalist-content {
+    justify-content: space-around;
+}
+
+/* Landscape (16:9) OVERHAUL - Use 2 columns if image exists */
+/* HAS IMAGE - Composition Balance */
+.aspect-1-1.has-image .apex-pnl-value,
+.aspect-1-1.has-image .minimalist-pnl,
+.aspect-1-1.has-image .neon-pnl {
+    font-size: 100px !important;
+    margin-bottom: 20px !important;
+}
+
+.aspect-1-1.has-image .apex-stats,
+.aspect-1-1.has-image .minimalist-stats {
+    gap: 24px !important;
+    /* Widely spread stats */
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+}
+
+.aspect-1-1.has-image .apex-screenshot,
+.aspect-1-1.has-image .minimalist-screenshot,
+.aspect-1-1.has-image .neon-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Square (1:1) Text Sizes */
+.aspect-1-1 .apex-pnl-value,
+.aspect-1-1 .minimalist-pnl {
+    font-size: 160px !important;
+    margin-bottom: 24px !important;
+}
+
+/* Legacy Ratios Purged */
+
+/* General Text Sizes for 1:1 */
+.aspect-1-1 .apex-stat-label,
+.aspect-1-1 .minimalist-stat-label {
+    font-size: 20px !important;
+}
+
+.aspect-1-1 .apex-stat-value,
+.aspect-1-1 .minimalist-stat-value {
+    font-size: 36px !important;
+}
+
+.aspect-1-1 .apex-pnl-label,
+.aspect-1-1 .minimalist-pnl-label {
+    font-size: 24px !important;
+    letter-spacing: 0.3em !important;
+}
+
+.aspect-1-1 .apex-username,
+.aspect-1-1 .minimalist-market {
+    font-size: 28px !important;
+}
+
+/* Purge legacy ratio overrides and duplicates */
+
+
+/* ============================================
+   TEMPLATE 2: NEON TRADER (Vibrant Gradient)
+   ============================================ */
+
+.template-neon-trader {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0a1628 40%, #0d1b2a 100%);
+    color: #fff;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.template-neon-trader::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.neon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    /* Reduced margin to bring badges closer to title */
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.neon-logo {
+    font-size: 72px;
+    /* Reduced to prevent covering GC symbol */
+    font-weight: 950;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.25;
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+    max-width: 75%;
+    /* Prevent overlap with market symbol */
+    flex-shrink: 1;
+}
+
+.neon-username {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 28px;
+    /* Larger market symbol */
+    font-weight: 700;
+    color: #94a3b8;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.neon-badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    /* Reduced margin */
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.neon-badge {
+    padding: 8px 18px;
+    /* Larger padding */
+    border-radius: 24px;
+    font-size: 18px;
+    /* Larger text */
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.neon-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.neon-pnl {
+    font-size: 88px;
+    /* Larger PnL */
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    flex: 0 0 auto;
+}
+
+.neon-content-scaler {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.neon-prices {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 12px;
+    flex: 0 0 auto;
+}
+
+.neon-price-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.neon-price-label {
+    font-size: 16px;
+    /* Larger label */
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.neon-price-value {
+    font-size: 32px;
+    /* Larger value */
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+.neon-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 16px 0 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    gap: 16px;
+    width: 100%;
+}
+
+.neon-custom-note {
+    font-size: 12px;
+    color: #94a3b8;
+    font-style: italic;
+    margin-top: 12px;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    padding: 0 20px;
+    flex-shrink: 0;
+    max-height: 60px;
+    overflow: hidden;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    box-sizing: border-box;
+}
+
+/* Screenshot for Neon */
+.neon-image-container {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.neon-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.neon-watermark {
+    font-size: 14px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.neon-date {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* ============================================
+   TEMPLATE 3: AESTHETIC (Aesthetic background focus)
+   ============================================ */
+
+.template-aesthetic {
+    background: #000;
+    color: #fff;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.aesthetic-content-layer {
+    position: relative;
+    z-index: 1;
+    padding: 14px;
+    /* Reduced padding 40% (from 24px) to move elements closer to corners */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Background Overlay */
+.aesthetic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.template-aesthetic .minimalist-content {
+    justify-content: flex-start !important;
+    align-items: center;
+}
+
+/* Override for no-image state in Aesthetic template */
+.template-aesthetic.no-image .minimalist-content {
+    justify-content: center !important;
+    gap: 32px !important;
+}
+
+/* Enlarge Aesthetic template elements */
+.template-aesthetic .minimalist-header {
+    margin-bottom: 8px;
+    /* Reduced from 24px to push text higher */
+}
+
+.template-aesthetic .minimalist-market {
+    font-size: 24px;
+}
+
+.template-aesthetic .minimalist-direction {
+    font-size: 20px;
+}
+
+.template-aesthetic .minimalist-custom-title {
+    font-size: 88px;
+    /* Reduced from 120px */
+    margin-bottom: 2px;
+}
+
+.template-aesthetic .minimalist-pnl {
+    font-size: 200px;
+}
+
+.template-aesthetic .minimalist-pnl-label {
+    font-size: 28px;
+    letter-spacing: 0.25em;
+}
+
+.template-aesthetic .minimalist-pnl-group {
+    margin-bottom: 2px;
+    /* Minimal margin for image room */
+}
+
+.template-aesthetic .minimalist-stat-label {
+    font-size: 22px;
+}
+
+.template-aesthetic .minimalist-stat-value {
+    font-size: 44px;
+    /* Larger stat values */
+}
+
+.template-aesthetic .minimalist-stats {
+    gap: 60px;
+    /* More gap between stats */
+    padding: 20px 0;
+}
+
+.template-aesthetic .minimalist-image-container {
+    flex: 1;
+    min-height: 200px;
+    /* Ensure image has more room */
+}
+
+.template-aesthetic .minimalist-footer {
+    padding: 10px 14px;
+    /* Reduced to match content-layer padding */
+}
+
+.template-aesthetic .template-watermark {
+    font-size: 18px;
+}
+
+.template-aesthetic .minimalist-date {
+    font-size: 16px;
+}
+
+/* Brighten text for Aesthetic background focus */
+.template-aesthetic .minimalist-market {
+    color: #cbd5e1;
+    /* Softened: slate-300 */
+    font-weight: 700;
+}
+
+.template-aesthetic .minimalist-pnl-label,
+.template-aesthetic .minimalist-stat-label {
+    color: #94a3b8;
+    /* Softened: slate-400 */
+    font-weight: 600;
+}
+
+.template-aesthetic .minimalist-stat-value {
+    color: #f4f4f5;
+    /* Off-white: zinc-100 */
+    font-weight: 700;
+}
+
+.template-aesthetic .minimalist-custom-note {
+    color: #a1a1aa;
+    /* Softened: zinc-400 */
+}
+
+.template-aesthetic .minimalist-date {
+    color: #71717a;
+    /* Softened: zinc-500 */
+}
+
+/* Watermark Styling */
+.template-watermark {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 12px;
+    font-family: 'Inter', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.template-aesthetic .template-watermark {
+    color: rgba(255, 255, 255, 0.6);
+    /* Brighter for aesthetic template */
+}
+
+/* ============================================
+   TEMPLATE 4: MINIMALIST (Clean & Simple)
+   ============================================ */
+
+.template-apex-pro {
+    background: #000;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.template-minimalist {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 32px;
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.minimalist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    /* Reduced from 44px to push everything higher */
+    flex-shrink: 0;
+}
+
+.minimalist-market {
+    font-size: 16px;
+    font-weight: 600;
+    color: #71717a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.minimalist-direction {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.minimalist-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center vertically for even spacing */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 0;
+    gap: 0;
+    /* No gap - elements positioned tightly */
+    overflow: hidden;
+}
+
+.minimalist-pnl-group {
+    margin-top: auto;
+    /* Push PnL down toward image, away from title */
+    margin-bottom: -16px;
+    /* Negative margin to bring image closer */
+    flex: 0 0 auto;
+}
+
+.minimalist-pnl {
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-bottom: -8px;
+    /* Negative margin to tighten spacing with image */
+}
+
+.minimalist-content-scaler {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.minimalist-image-container {
+    flex: 1 1 0;
+    /* Allow both growing and shrinking */
+    min-height: 0;
+    /* Critical: allows flex item to shrink below content size */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.minimalist-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    border: none !important;
+    background: none !important;
+}
+
+.minimalist-custom-title {
+    font-size: 64px;
+    font-weight: 800;
+    color: #f4f4f5;
+    margin: 0;
+    /* No margin - tight spacing */
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    flex-shrink: 0;
+}
+
+.minimalist-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding: 16px 0 10px 0;
+    /* More padding top for breathing room below image */
+    border-top: 1px solid #27272a;
+    width: 100%;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 8px;
+    /* Added margin-top for more breathing room */
+}
+
+/* NO IMAGE STATE for Minimalist */
+.no-image .minimalist-content {
+    justify-content: center;
+    gap: 32px;
+    /* Add gap between elements when no image */
+}
+
+.no-image .minimalist-pnl-group {
+    margin-top: 0;
+    /* Reset margin-top: auto */
+    margin-bottom: 0;
+    /* Reset negative margin */
+}
+
+.no-image .minimalist-pnl {
+    margin-bottom: 0;
+    /* Reset negative margin */
+}
+
+.no-image .minimalist-stats {
+    margin-top: 0;
+    padding-top: 24px;
+    border-top: none;
+    /* Remove border if preferred without image, or keep */
+}
+
+.minimalist-stat {
+    text-align: center;
+}
+
+.minimalist-stat-label {
+    font-size: 11px;
+    color: #52525b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.minimalist-stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e4e4e7;
+}
+
+.minimalist-footer {
+    text-align: center;
+    flex-shrink: 0;
+    padding: 12px 20px 16px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #27272a;
+}
+
+.minimalist-custom-note {
+    font-size: 11px;
+    /* Slightly smaller */
+    color: #71717a;
+    font-style: italic;
+    margin-top: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
+    padding: 0 24px;
+    /* Reduced padding */
+    flex-shrink: 0;
+    max-height: 50px;
+    /* Reduced max height */
+    overflow: hidden;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Reduced to 2 lines */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    box-sizing: border-box;
+}
+
+.minimalist-date {
+    font-size: 12px;
+    color: #3f3f46;
+    margin-top: 8px;
+}
+
+/* Screenshot for Minimalist */
+.minimalist-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    border: none !important;
+    background: none !important;
+}
+
+/* ============================================
+   TEMPLATE SELECTOR
+   ============================================ */
+
+/* Template Selector Styles */
+.template-selector {
+    display: flex;
+    gap: 8px;
+    /* Reduced from 12px */
+    padding: 4px 0;
+    /* Reduced from 8px 0 */
+}
+
+.template-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    /* Reduced from 8px */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 6px;
+    /* Reduced from 8px */
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.template-option:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.template-option.active {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: var(--accent);
+}
+
+.template-preview {
+    width: 36px;
+    /* Reduced from 52px */
+    height: 36px;
+    /* Reduced from 52px */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.template-preview-apex-pro {
+    background: linear-gradient(135deg, #1e293b, #020617);
+}
+
+.template-preview-neon-trader {
+    background: linear-gradient(135deg, #4c1d95, #1e1b4b);
+}
+
+.template-preview-aesthetic {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.template-preview-minimalist {
+    background: rgba(255, 255, 255, 0.05);
+    /* Removed solid black, use subtle grey */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.template-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+/* ============================================
+   CUSTOMIZATION PANEL
+   ============================================ */
+
+.customization-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.customization-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.customization-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.field-toggles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.field-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.field-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.field-toggle input[type="checkbox"] {
+    accent-color: var(--accent);
+}
+
+.field-toggle-label {
+    font-size: 13px;
+    color: var(--text-primary);
+}
+
+/* Screenshot Upload */
+.screenshot-upload {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.screenshot-upload:hover {
+    border-color: var(--accent);
+    background: rgba(34, 197, 94, 0.05);
+}
+
+.screenshot-upload-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.screenshot-upload-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.screenshot-preview {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.screenshot-preview img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.screenshot-remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.screenshot-remove:hover {
+    background: #ef4444;
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+/* Export Button */
+.export-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--accent) 0%, #16a34a 100%);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.export-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+.export-button:active {
+    transform: translateY(0);
+}
+
+.export-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ============================================
+   PAGE LAYOUT (No scrolling on main page)
+   ============================================ */
+
+.trade-card-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at top right, #1a1e23 0%, var(--bg-primary) 40%);
+}
+
+.trade-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.trade-card-page-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.trade-card-content {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    flex: 1;
+    padding: 24px;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.trade-card-preview-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    min-height: 0;
+    min-width: 0;
+    box-sizing: border-box;
+    /* Padding is accounted for in JS scale calculation */
+}
+
+.trade-card-options-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    padding-right: 8px;
+    min-height: 0;
+}
+
+/* Custom scrollbar for options panel */
+.trade-card-options-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.trade-card-options-panel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.trade-card-options-panel::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+.trade-card-options-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* ============================================
+   ASPECT RATIO SELECTOR
+   ============================================ */
+
+.aspect-ratio-selector {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.aspect-ratio-option {
+    padding: 8px 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.aspect-ratio-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-secondary);
+}
+
+.aspect-ratio-option.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* ============================================
+   DATE FILTER PILLS
+   ============================================ */
+
+.date-filter-pills {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.date-filter-pill {
+    padding: 6px 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.date-filter-pill:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-secondary);
+}
+
+.date-filter-pill.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* ============================================
+   TRADE IMAGE THUMBNAILS
+   ============================================ */
+
+.minimalist-pnl-group {
+    margin-bottom: 32px;
+    flex-shrink: 0;
+}
+
+.customization-label-small {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.trade-image-thumbnails {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.trade-image-thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.trade-image-thumbnail:hover {
+    border-color: var(--text-secondary);
+    transform: scale(1.05);
+}
+
+.trade-image-thumbnail.active {
+    border-color: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.trade-image-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Compact upload button */
+.screenshot-upload-compact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--bg-tertiary);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.screenshot-upload-compact:hover {
+    border-color: var(--accent);
+    background: rgba(34, 197, 94, 0.05);
+    color: var(--accent);
+}
+
+/* Screenshot Actions Container */
+.screenshot-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.screenshot-clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    background: transparent;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 8px;
+    color: #ef4444;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.screenshot-clear-btn:hover {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+}

@@ -24,15 +24,15 @@ TradeSlate is a professional-grade trading journal built for speed, privacy, and
 
 | Dashboard Overview | Trade Entry |
 |:---:|:---:|
-| ![Dashboard](Assets/Tradeslate%20Preview%20Images/Homepage.png) | ![Trade Entry](Assets/Tradeslate%20Preview%20Images/Trade_Entry_Tab.png) |
+| ![Homepage](Assets/Tradeslate%20Preview%20Images/Homepage.png) | ![Trade Entry Log](Assets/Tradeslate%20Preview%20Images/Trade_Entry_Tab.png) |
 
 | AI Analysis | Trade Card |
 |:---:|:---:|
-| ![AI Analysis](Assets/Tradeslate%20Preview%20Images/Individual_Trade_Reviews-Review_Tab.png) | ![Trade Card](Assets/Tradeslate%20Preview%20Images/Trade_Card_Tab.png) |
+| ![Individual Trade AI Analysis](Assets/Tradeslate%20Preview%20Images/Individual_Trade_Reviews-Review_Tab.png) | ![Aesthetic Trade Card](Assets/Tradeslate%20Preview%20Images/Trade_Card_Tab.png) |
 
 | Analytics | Weekly Review |
 |:---:|:---:|
-| ![Analytics](Assets/Tradeslate%20Preview%20Images/Analytics_Tab.png) | ![Weekly Review](Assets/Tradeslate%20Preview%20Images/Weekly_Reviews-Review_Tab.png) |
+| ![In-Depth Analytics](Assets/Tradeslate%20Preview%20Images/Analytics_Tab.png) | ![(AI) Weekly Review](Assets/Tradeslate%20Preview%20Images/Weekly_Reviews-Review_Tab.png) |
 
 ---
 
@@ -60,7 +60,7 @@ Effortless data entry with professional depth.
 *   **Voice Dictation**: Use the "Dictate" button to speak your thoughts. The app uses a local Whisper model to transcribe your voice securely.
 *   **Smart Rewrite**: Click "Rewrite" to have AI clean up your dictated notes into structured, professional trading prose.
 *   **Detailed Attributes**: Log every detail: Setup, Trigger, Confluences, Mistakes, Tags, Pre/Post Emotions, and Risk parameters.
-*   **Bulk Actions**: Select multiple trades in the list to Delete or Edit tags in bulk.
+*   **Bulk Actions**: Select multiple trades in the list to Delete in bulk.
 
 ### 3. Deep Analytics
 Understand your edge with granular metrics.
@@ -145,15 +145,21 @@ Total control over your environment.
 
 ![Settings](Assets/Tradeslate%20Preview%20Images/AI_Assistant_Section-Settings_Tab.png)
 
+*   **Account Management**: Create and edit multiple trading accounts with custom names and identifying colors.
+*   **Trading Preferences**: Define custom Break-Even thresholds (in R-Multiple) and global Timezone Offsets.
+*   **Behavioral & Risk**: Configure automated flags for **FOMO (Velocity)**, **Revenge Trading**, and **Fumble (Missed Wins)** detection.
+*   **Import Trades**: Flexible CSV module to bulk-import historical data from any platform.
+*   **AI Assistant**:
+    *   **Prompts**: Customize the system instructions for Individual Reviews, Weekly Insights, and Note Rewriting.
+    *   **Models**: Select specific Gemini models (Flash or Pro) per task to balance speed, cost, and depth.
+*   **Voice Dictation (STT)**:
+    *   **Provider**: Choose between **Local (WebGPU/Private)** or **Cloud (OpenAI)** engines.
+    *   **Hardware**: Select input microphones and download local engine tiers (Tiny to Large).
+*   **Affirmations**: Manage, schedule, and bulk-import your custom daily performance psychology list.
 *   **Data Management**: 
-    *   **Export**: Full JSON export of your database (trades, settings, tags) for backup.
-    *   **Import**: Restore your data from a JSON file.
+    *   **Export**: Full JSON export of your database (trades, accounts, settings) for backup.
+    *   **Import**: Restore or merge your data from a JSON backup file.
     *   **Seed Data**: Populate the app with demo trades to explore features.
-*   **AI Configuration**:
-    *   **Gemini API**: Enter your personal key for AI features.
-    *   **OpenAI API**: Optional fallback for cloud-based transcription.
-*   **Voice Engine**: Choose between Local (WebGPU/WASM) or Cloud STT.
-*   **Affirmations**: Manage your custom daily affirmations list.
 
 ---
 
@@ -169,10 +175,10 @@ Built with a modern stack for performance and reliability:
 
 ## Getting Started
 
-1.  **Download**: Get the latest release from the [Releases](https://github.com/your-repo/releases) page.
-2.  **Install**: Run `TradeSlate.exe`.
+1.  **Download**: Get the latest release from the [Releases](https://github.com/Aikzar/TradeSlate/releases) page.
+2.  **Install**: Run `TradeSlate-Setup-1.0.0.exe`.
 3.  **Setup**:
-    *   (Optional) Go to **Settings** -> **AI Assistant** to enter your generic Google Gemini API Key for AI features.
+    *   (Optional) Go to **Settings** -> **AI Assistant** to enter your Google Gemini API Key, optainable via [Google AI Studio](https://aistudio.google.com/), for AI features.
     *   (Optional) Seed demo data to explore the features.
 4.  **Journal**: Start logging your trades!
 

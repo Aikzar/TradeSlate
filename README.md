@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # TradeSlate
-=======
-# TradeSlate v1.0.0 (Beta)
 
 **The Offline-First, AI-Augmented Trading Journal for Power Users.**
 

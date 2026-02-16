@@ -175,6 +175,7 @@ Built with a modern stack for performance and reliability:
 4.  **Journal**: Start logging your trades!
 
 ## License
+This project is licensed under the **PolyForm Noncommercial License 1.0.0**.
 
-(C) 2026 TradeSlate. All Rights Reserved.
-> (v1.0.0 (Beta) Launch Release - Ultra Detailed Documentation, Feature Complete)
+
+> v1.0.0 (Beta) Launch Release - Ultra Detailed Documentation, Feature Complete

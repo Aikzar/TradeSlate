@@ -1,7 +1,7 @@
 # TradeSlate
 
 [![Release](https://img.shields.io/github/v/release/Aikzar/TradeSlate?style=flat-square)](https://github.com/Aikzar/TradeSlate/releases)
-[![License](https://img.shields.io/github/license/Aikzar/TradeSlate?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-green?style=flat-square)](LICENSE)
 
 **The Offline-First, AI-Augmented Trading Journal for Power Users.**
 

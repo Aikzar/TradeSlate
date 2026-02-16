@@ -82,7 +82,7 @@ Understand your edge with granular metrics.
     *   **Duration Scatter**: Analysis of hold times vs. profitability.
 *   **Stats Breakdown**: Filter and analyze performance specifically by **Setup**, **Tag**, **Market**, or **Direction** (Long/Short).
 
-### 4. Calendar & Heatmaps
+### 4. Calendar
 Visualizing your consistency.
 
 ![Calendar](Assets/Tradeslate%20Preview%20Images/Calendar_Tab.png)
@@ -179,5 +179,5 @@ Built with a modern stack for performance and reliability:
 
 ## License
 
-(C) 2026 Antigravity. All Rights Reserved.
->>>>>>> 07cee8e (v1.0.0 (Beta) Launch Release - Ultra Detailed Documentation, Feature Complete)
+(C) 2026 TradeSlate. All Rights Reserved.
+>>>>>> (v1.0.0 (Beta) Launch Release - Ultra Detailed Documentation, Feature Complete)

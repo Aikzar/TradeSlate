@@ -1,5 +1,8 @@
 # TradeSlate
 
+[![Release](https://img.shields.io/github/v/release/Aikzar/TradeSlate?style=flat-square)](https://github.com/Aikzar/TradeSlate/releases)
+[![License](https://img.shields.io/github/license/Aikzar/TradeSlate?style=flat-square)](LICENSE)
+
 **The Offline-First, AI-Augmented Trading Journal for Power Users.**
 
 TradeSlate is a professional-grade trading journal built for speed, privacy, and deep analysis. It combines the reliability of offline storage with the power of optional AI analysis, designed specifically for futures and crypto traders who demand control over their data.

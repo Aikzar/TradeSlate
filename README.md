@@ -13,6 +13,7 @@ TradeSlate is a professional-grade trading journal built for speed, privacy, and
 *   **🤖 Optional AI Augmentation**: Leverage Google Gemini AI for deep insights, pattern recognition, and "tough love" feedback—but only when *you* choose. AI features are opt-in and use your own API key.
 *   **📊 Power-User Analytics**: Go beyond simple P&L. Track MFE/MAE, R-multiples, heatmaps, and psychological tags. Visualize your edge with professional-grade charts and equity curves.
 *   **🗣️ Voice-to-Text Integration**: Dictate your trade thoughts in real-time. Built-in local STT (Whisper via Transformers.js) or cloud-based transcription ensures you capture your mindset without typing.
+*   **✏️ Built-in Chart Markup**: Draw directly on your uploaded charts within the app. Add trendlines, support/resistance boxes, circles, and text annotations to highlight your edge without external tools.
 
 ---
 

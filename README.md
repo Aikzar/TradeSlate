@@ -163,7 +163,16 @@ Total control over your environment.
 
 ---
 
-## Technical Highlights
+## 🛠️ Installation
+
+1.  **Download**: Get the latest release from the [Releases](https://github.com/Aikzar/TradeSlate/releases) page.
+2.  **Install**: Run `TradeSlate-Setup-1.0.0.exe`.
+3.  **Setup**:
+    *   (Optional) Go to **Settings** -> **AI Assistant** to enter your Google Gemini API Key, optainable via [Google AI Studio](https://aistudio.google.com/), for AI features.
+    *   (Optional) Seed demo data to explore the features.
+4.  **Journal**: Start logging your trades!
+
+## 💻 Tech Stack
 
 Built with a modern stack for performance and reliability:
 
@@ -172,15 +181,6 @@ Built with a modern stack for performance and reliability:
 *   **SQLite (Better-SQLite3)**: Robust, serverless SQL database engine for instant data retrieval.
 *   **Transformers.js**: On-device machine learning for voice transcription (Whisper).
 *   **Google Gemini API**: Integration for advanced LLM-based trade analysis.
-
-## Getting Started
-
-1.  **Download**: Get the latest release from the [Releases](https://github.com/Aikzar/TradeSlate/releases) page.
-2.  **Install**: Run `TradeSlate-Setup-1.0.0.exe`.
-3.  **Setup**:
-    *   (Optional) Go to **Settings** -> **AI Assistant** to enter your Google Gemini API Key, optainable via [Google AI Studio](https://aistudio.google.com/), for AI features.
-    *   (Optional) Seed demo data to explore the features.
-4.  **Journal**: Start logging your trades!
 
 ## License
 This project is licensed under the **PolyForm Noncommercial License 1.0.0**.
